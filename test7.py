@@ -1,5 +1,5 @@
 # база пациентов
-list_of_patient = [0, 1, 2, 3]
+list_of_patient = [0, 1, 2, 2]
 
 
 patient_status = {
@@ -75,7 +75,33 @@ def down_patient_status(id_patient):
         list_of_patient[id_patient] = new_patient_status_id #меняем статус пациенца в списке
         print_new_status_patient(new_patient_status_id)
 
-up_patient_status(4)
+#up_patient_status(4)
+
+#new_status_patient = f"""Новый статус пациента: {status}"""
+def calculate_statistic(list_of_patient):
+    count_patient = len(list_of_patient)
+    print_count_patient = f"""В больнице на данный момент находятся {count_patient} чел., и них:"""
+    print(print_count_patient)
+
+    status_1 = list_of_patient.count(0)
+    if status_1 != 0:
+        print_status_1 = f"""- в статусе "Тяжело болен": {status_1} чел."""
+        print(print_status_1)
+
+    status_2 = list_of_patient.count(1)
+    if status_2 != 0:
+        print_status_2 = f"""- в статусе "Болен": {status_2} чел."""
+        print(print_status_2)
+
+    status_3 = list_of_patient.count(2)
+    if status_3 != 0:
+        print_status_3 = f"""- в статусе "Слегка болен": {status_3} чел."""
+        print(print_status_3)
+
+    status_4 = list_of_patient.count(3)
+    if status_4 != 0:
+        print_status_4 = f"""- в статусе "Готов к выписке": {status_4} чел."""
+        print(print_status_4)
 
 
-def calculate_statistic
+calculate_statistic(list_of_patient)
